@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weathering</title>
+    <!-- Load Tailwind CSS via CDN - FIXED LINK -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-blue': '#3B82F6',
+                        'accent-dark': '#1F2937',
+                        'detail-light': '#EFF6FF', /* Blue-50 */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom background for the sky effect */
+        .sky-gradient {
+            /* Light blue fading into a slightly deeper blue */
+            background: linear-gradient(to top, #DCEAFE, #93C5FD); 
+        }
+    </style>
+</head>
+<body class="sky-gradient min-h-screen flex justify-center p-4 pt-12 font-sans">
+
+    <div id="app" class="w-full max-w-sm sm:max-w-md">
+        
+        <!-- Header -->
+        <h1 class="text-3xl font-extrabold text-center mb-8 text-accent-dark">Weather Forecast</h1>
+
+        <!-- Search Bar -->
+        <div class="bg-white p-4 rounded-xl mb-6 flex space-x-3 items-center shadow-lg">
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Enter city name (e.g., Yangon, Mandalay)"
+                class="flex-grow p-2 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue outline-none bg-detail-light transition duration-150 font-medium text-gray-700"
+                readonly
+            >
+            <button
+                id="search-button"
+                class="bg-primary-blue text-white p-3 rounded-xl shadow-md transition duration-150 flex items-center justify-center cursor-not-allowed opacity-75"
+                title="Search (Non-functional without JavaScript)"
+            >
+                <!-- Search Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </button>
+        </div>
+        
+    </div> <!-- CLOSED THE APP CONTAINER -->
+</body>
+</html>
