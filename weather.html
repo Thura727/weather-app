@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Focus App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #74b9ff, #0984e3);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .weather-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 300px;
+    }
+
+    .weather-card h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .weather-card h2 {
+      font-size: 1.5em;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      font-size: 5em;
+      margin: 15px 0;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1em;
+      margin-top: 20px;
+    }
+
+    .details div {
+      text-align: center;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.8em;
+      opacity: 0.8;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      outline: none;
+      font-size: 1em;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="weather-card">
+    <input type="text" placeholder="Enter city name">
+    <h2>Yangon, Myanmar</h2>
+    <div class="icon">🌤</div>
+    <h1>28°C</h1>
+    <p>Partly Cloudy</p>
+
+    <div class="details">
+      <div>
+        <p>💧 Humidity</p>
+        <p>70%</p>
+      </div>
+      <div>
+        <p>🌬 Wind</p>
+        <p>10 km/h</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      Updated: 13 Nov 2025, 10:00 AM
+    </div>
+  </div>
+</body>
+</html>
