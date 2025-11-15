@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+      font-family: sans-serif; /* Simplified font for portability */
     }
 
     body {
@@ -27,9 +27,42 @@
       border-radius: 20px;
       text-align: center;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      width: 300px;
+      width: 350px; /* Slightly wider to accommodate button */
     }
 
+    /* New styles for the search bar */
+    .search-area {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .search-area input[type="text"] {
+      flex-grow: 1;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1em;
+      color: #333; /* Input text color */
+      text-align: left;
+    }
+
+    .search-area button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #fdd835; /* Yellow button color */
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .search-area button:hover {
+      background-color: #fbc02d;
+    }
+    
     .weather-card h1 {
       font-size: 3em;
       margin-bottom: 10px;
@@ -48,7 +81,7 @@
 
     .details {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       font-size: 1em;
       margin-top: 20px;
     }
@@ -63,41 +96,36 @@
       opacity: 0.8;
     }
 
-    input[type="text"] {
-      width: 100%;
-      padding: 8px 10px;
-      border: none;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      outline: none;
-      font-size: 1em;
-      text-align: center;
-    }
-
   </style>
 </head>
 <body>
   <div class="weather-card">
-    <input type="text" placeholder="Enter city name">
-    <h2>Yangon, Myanmar</h2>
-    <div class="icon">🌤</div>
-    <h1>28°C</h1>
-    <p>Partly Cloudy</p>
+    
+    <div class="search-area">
+      <input id="cityInput" type="text" placeholder="Enter city name">
+      <button id="searchButton">Search</button>
+    </div>
+    <h2 id="cityName">City, Country</h2>
+    <div class="icon" id="weatherIcon">❓</div>
+    <h1 id="temperature">--°C</h1>
+    <p id="description">Check the weather</p>
 
     <div class="details">
       <div>
         <p>💧 Humidity</p>
-        <p>70%</p>
+        <p id="humidity">--%</p>
       </div>
       <div>
         <p>🌬 Wind</p>
-        <p>10 km/h</p>
+        <p id="wind">-- m/s</p>
       </div>
     </div>
 
-    <div class="footer">
-      Updated: 13 Nov 2025, 10:00 AM
+    <div class="footer" id="updatedAt">
+      Updated: Never
     </div>
   </div>
+
+  <script src="script.js">   </script>
 </body>
 </html>
