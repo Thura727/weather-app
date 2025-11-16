@@ -12,6 +12,8 @@
 - 🌦️ Dynamic weather icons based on conditions
 - 📱 Fully responsive design for desktop and mobile
 - ⏰ Auto-updates with the latest fetch time
+- 📅 5-day weather forecast with daily temperature and conditions
+
 
 ---
 
