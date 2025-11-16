@@ -3,12 +3,6 @@
   A clean and interactive weather application to check current weather worldwide.
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML-CSS-JS-blue" alt="Technologies">
-  <img src="https://img.shields.io/badge/API-OpenWeatherMap-green" alt="API">
-  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
-</p>
-
 ---
 
 ## ✨ Features
