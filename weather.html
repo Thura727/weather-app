@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: sans-serif; /* Simplified font for portability */
+      font-family: sans-serif;
     }
 
     body {
@@ -27,14 +28,17 @@
       border-radius: 20px;
       text-align: center;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      width: 350px; /* Slightly wider to accommodate button */
+      width: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    /* New styles for the search bar */
     .search-area {
       display: flex;
       gap: 10px;
       margin-bottom: 20px;
+      width: 100%;
     }
 
     .search-area input[type="text"] {
@@ -44,7 +48,7 @@
       border-radius: 8px;
       outline: none;
       font-size: 1em;
-      color: #333; /* Input text color */
+      color: #333;
       text-align: left;
     }
 
@@ -52,7 +56,7 @@
       padding: 10px 15px;
       border: none;
       border-radius: 8px;
-      background-color: #fdd835; /* Yellow button color */
+      background-color: #fdd835;
       color: #333;
       font-weight: bold;
       cursor: pointer;
@@ -61,17 +65,6 @@
 
     .search-area button:hover {
       background-color: #fbc02d;
-    }
-    
-    .weather-card h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    .weather-card h2 {
-      font-size: 1.5em;
-      font-weight: 400;
-      margin-bottom: 20px;
     }
 
     .icon {
@@ -84,6 +77,7 @@
       justify-content: space-around;
       font-size: 1em;
       margin-top: 20px;
+      width: 100%;
     }
 
     .details div {
@@ -96,15 +90,39 @@
       opacity: 0.8;
     }
 
+    /* 5-day forecast */
+    .forecast {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      width: 100%;
+      flex-wrap: nowrap;
+    }
+
+    .forecast-day {
+      text-align: center;
+      font-size: 0.85em;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px;
+      border-radius: 10px;
+      min-width: 50px;
+    }
+
+    .forecast-day .icon {
+      font-size: 2em;
+      margin: 5px 0;
+    }
   </style>
 </head>
+
 <body>
   <div class="weather-card">
-    
     <div class="search-area">
       <input id="cityInput" type="text" placeholder="Enter city name">
       <button id="searchButton">Search</button>
     </div>
+
     <h2 id="cityName">City, Country</h2>
     <div class="icon" id="weatherIcon">❓</div>
     <h1 id="temperature">--°C</h1>
@@ -121,11 +139,14 @@
       </div>
     </div>
 
-    <div class="footer" id="updatedAt">
-      Updated: Never
-    </div>
+    <div class="footer" id="updatedAt">Updated: Never</div>
+
+    <!-- 5-Day Forecast Section -->
+    <div class="forecast" id="forecast"></div>
+
   </div>
 
-  <script src="script.js">   </script>
+  <script src="script.js"></script>
 </body>
+
 </html>
